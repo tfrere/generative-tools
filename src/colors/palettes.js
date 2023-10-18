@@ -20,6 +20,17 @@ export const createMonochromePalette = () => {
   return colors;
 };
 
+export const createPaletteFromColor = (color) => {
+  let mainColor = chroma(color);
+
+  let colors = chroma
+    .scale([mainColor, mainColor.set("hsl.h", "+90")])
+    .mode("lch")
+    .colors(5);
+
+  return colors;
+};
+
 export const getRandomPalette = () => {
   let colorIndex = randomSnap(0, 100, 1);
   return {
