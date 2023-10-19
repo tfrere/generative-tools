@@ -7,6 +7,7 @@ const defaultOpts = {
   xInc: 0.01,
   yInc: 0.01,
   seed: Math.random() * 1000,
+  symmetryVertical: false,
 };
 
 function clamp(number, min, max) {
@@ -20,6 +21,20 @@ function lookup(cells, width, height, cols, resolution) {
 
     return cells[x + y * cols];
   };
+}
+
+function applyAxialSymmetry(cells, numCols, numRows) {
+  const middle = Math.floor(numCols / 2);
+  for (let y = 0; y < numRows; y++) {
+    for (let x = 0; x < middle; x++) {
+      const index = x + y * numCols;
+      const mirrorIndex = middle + (middle - x) - 1 + y * numCols;
+      cells[mirrorIndex] = {
+        ...cells[index],
+        noiseValue: cells[index].noiseValue,
+      };
+    }
+  }
 }
 
 function createNoiseGrid(opts) {
@@ -58,6 +73,8 @@ function createNoiseGrid(opts) {
 
     yOff += opts.yInc;
   }
+
+  if (opts.symmetryVertical) applyAxialSymmetry(cells, numCols, numRows);
 
   return {
     cells,
