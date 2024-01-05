@@ -2,7 +2,16 @@
 
 This is a fork of GeorgesDocode's Generative Tools, tailored for specific generative art projects.
 
-## Features
+## Installation
+```sh
+npm install @tfrere/generative-tools
+```
+
+## Usage
+Import the modules from the library as needed in your projects.
+
+
+## Documentation
 
 ### `createCoordsTransformer`
 Transforms screen coordinates to SVG coordinates.
@@ -87,14 +96,6 @@ Generates a Voronoi diagram from a set of points.
 ```js
 createVoronoiDiagram(points);
 ```
-
-## Installation
-```sh
-npm install @tfrere/generative-tools
-```
-
-## Usage
-Import the modules from the library as needed in your projects.
 
 ## Contributing
 Contributions are welcomed. Please adhere to the guidelines.
