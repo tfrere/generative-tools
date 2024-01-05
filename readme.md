@@ -1,105 +1,103 @@
 # Generative Tools Library
 
-## Introduction
-Generative Tools is a JavaScript library designed for creating generative art. It offers a suite of functions to facilitate the creation of complex visual patterns and structures.
-It was originaly forked from georgesdocode generative utils.
+This is a fork of GeorgesDocode's Generative Tools, tailored for specific generative art projects.
 
-## To install 
-
-'''
-npm i @tfrere/generative-tools
-'''
-
-
-## Features and Examples
+## Features
 
 ### `createCoordsTransformer`
 Transforms screen coordinates to SVG coordinates.
-'''
-Example: 
-Use `createCoordsTransformer(svgElement)` to get mouse coordinates relative to an SVG element.
-'''
+[Source](./src/createCoordsTransformer.js)
+---js
+createCoordsTransformer(svgElement);
+---
 
 ### `createNoiseGrid`
 Generates a noise grid using simplex noise.
-'''
-Example: 
-Use `createNoiseGrid(options)` with options like width, height, and resolution to create a noise pattern.
-'''
+[Source](./src/createNoiseGrid.js)
+---js
+createNoiseGrid(options);
+---
 
 ### `randomBias`
 Generates a biased random number between a range.
-'''
-Example: 
-`randomBias(min, max, bias, influence)` can be used to skew random numbers towards a bias value.
-'''
+[Source](./src/randomBias.js)
+---js
+randomBias(min, max, bias, influence);
+---
 
 ### `randomBool`
 Returns a random boolean value.
-'''
-Example: 
-Use `randomBool()` to get a true or false value randomly.
-'''
+[Source](./src/randomBool.js)
+---js
+randomBool();
+---
 
 ### `randomChoice`
 Selects a random element from an array.
-'''
-Example: 
-`randomChoice(array)` can be used to pick a random item from a list.
-'''
+[Source](./src/randomChoice.js)
+---js
+randomChoice(array);
+---
 
 ### `randomSnap`
 Generates a random number and snaps it to a specified increment.
-'''
-Example: 
-`randomSnap(min, max, snapIncrement)` to get a value snapped to a grid.
-'''
+[Source](./src/randomSnap.js)
+---js
+randomSnap(min, max, snapIncrement);
+---
 
 ### `map`
 Maps a number from one range to another.
-'''
-Example: 
-Use `map(value, start1, end1, start2, end2)` to re-map a number from one range to another.
-'''
+[Source](./src/map.js)
+---js
+map(value, start1, end1, start2, end2);
+---
 
 ### `pointsInPath`
 Generates points along an SVG path.
-'''
-Example: 
-`pointsInPath(svgPath, numPoints)` can be used to get a set of evenly distributed points along a path.
-'''
+[Source](./src/pointsInPath.js)
+---js
+pointsInPath(svgPath, numPoints);
+---
 
 ### `spline`
 Creates a smooth spline curve through a set of points.
-'''
-Example: 
-Use `spline(points, tension, close)` to create a spline through given points.
-'''
+[Source](./src/spline.js)
+---js
+spline(points, tension, close);
+---
 
 ### `shuffle`
 Shuffles an array randomly.
-'''
-Example: 
-`shuffle(array)` can be used to randomize the order of elements in an array.
-'''
+[Source](./src/shuffle.js)
+---js
+shuffle(array);
+---
 
 ### `simplex`
 Generates simplex noise.
-'''
-Example: 
-Use `simplex(x, y)` to generate 2D simplex noise values.
-'''
+[Source](./src/simplex.js)
+---js
+simplex(x, y);
+---
 
 ### `createVoronoiDiagram`
 Generates a Voronoi diagram from a set of points.
-'''
-Example: 
-`createVoronoiDiagram(points)` to create a Voronoi diagram for a given set of points.
-'''
+[Source](./src/createVoronoiDiagram.js)
+---js
+createVoronoiDiagram(points);
+---
+
+## Installation
+---sh
+npm install @tfrere/generative-tools
+---
+
+## Usage
+Import the modules from the library as needed in your projects.
 
 ## Contributing
-Contributions are welcome. Please follow the guidelines in the project's repository.
+Contributions are welcomed. Please adhere to the guidelines.
 
 ## License
-This project is licensed under the MIT License.
-
+Licensed under the MIT License.
